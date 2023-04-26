@@ -20,8 +20,9 @@ body {
 
 main {
     background-color: white;
-    height: 80% !important ;
+    height: 60rem !important ;
     border-radius: 4px; /*da ereditare*/
+    border: solid rgb(109, 109, 109) 1px;
 }
 
 #lft-side {
@@ -75,7 +76,7 @@ img {
 
 .listchat {
     width: 100%;
-    height: 74.9%;
+    height: calc(60rem - 13.8rem);
     background-color: #ffffff;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -108,4 +109,27 @@ img {
 
 .chat:hover {
     background-color: #eeeeee;
+}
+
+.chatbox {
+    background-image: url(../img/mine.jpg);
+    width: 100%;
+    height: calc(51rem - 1px);
+    overflow-y: scroll;
+}
+
+.textbox {
+    height: 4rem;
+    width: 100%;
+    background-color: #e9e9e9;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textbox i {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin: 1rem;
 }
