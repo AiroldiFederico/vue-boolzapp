@@ -1,0 +1,20 @@
+
+/* PROPRIETA CORPO DOM */
+body {
+    font-family: 'Rubik', sans-serif !important; font-weight: bold !important;
+    word-spacing: 2px;
+    height: 100vh !important;
+    background-color: var(--color-4);
+}
+
+/* PALETTE COLORI */
+:root {
+    --color-1: #617C8C;
+    --color-2: #B6E1F2;
+    --color-3: #A63737;
+    --color-4: #e8e8e8;
+    --color-5: #262626;
+}
+
+
+
