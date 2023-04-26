@@ -4,7 +4,8 @@ body {
     font-family: 'Rubik', sans-serif !important; font-weight: bold !important;
     word-spacing: 2px;
     height: 100vh !important;
-    background-color: var(--color-4);
+    background: rgb(145,199,151);
+    background: linear-gradient(180deg, rgb(56, 194, 146) 20%, rgba(221,221,221,1) 10%);
 }
 
 /* PALETTE COLORI */
@@ -16,5 +17,27 @@ body {
     --color-5: #262626;
 }
 
+main {
+    background-color: white;
+    height: 80% !important ;
+    border-radius: 4px; /*da ereditare*/
+}
 
+#lft-side {
+    border-right: 2px solid #0000002a;
+}
 
+.topbar {
+    width: 100%;
+    background-color: #e8e8e8;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 4rem;
+}
