@@ -88,10 +88,10 @@
                     <!-- LISTA CHAT -->
                     <div class="listchat">
                         <!-- CHAT SINGOLA -->
-                        <div class="chat">
-                            <img src="./asset/img/avatar_1.png" alt="pp1">
+                        <div class="chat" v-for="item in contacts">
+                            <img :src="item.avatar" alt="pp1">
                             <div class="d-flex flex-column ms-2">
-                                <span>NOME</span>
+                                <span>{{ item.name }}</span>
                                 <span class="secondary-text-color fw-normal">Ultimo messaggio inviato</span>
                             </div>
                             <div id="ora1" class="secondary-text-color fw-normal">
