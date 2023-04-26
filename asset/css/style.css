@@ -15,6 +15,7 @@ body {
     --color-3: #A63737;
     --color-4: #e8e8e8;
     --color-5: #262626;
+    --secondary-text: #c2c2c2;
 }
 
 main {
@@ -25,6 +26,7 @@ main {
 
 #lft-side {
     border-right: 2px solid #0000002a;
+    height: 100% !important;
 }
 
 .topbar {
@@ -50,16 +52,17 @@ img {
 .alert {
     background-color: rgb(112, 216, 250);
     width: 100%;
-    height: 6rem;
+    height: 5.5rem;
     border-radius: 0%;
     padding: 1rem;
+    margin: 0;
 }
 
 #bell-alert {
     background-color: white;
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,5 +70,42 @@ img {
 
 #bell-alert i {
     color: rgb(112, 216, 250) !important;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
+}
+
+.listchat {
+    width: 100%;
+    height: 74.9%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.searchbox {
+    width: 100%;
+    padding: 0.4rem;
+    background-color: #f0f0f0;
+}
+
+.chat {
+    height: 6rem;
+    display: flex;
+    padding: 1rem;
+    position: relative;
+    border-bottom: solid 1.5px rgb(232, 232, 232);
+}
+
+#ora1 {
+    font-size: smaller;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.secondary-text-color {
+    color: var(--secondary-text);
+}
+
+.chat:hover {
+    background-color: #eeeeee;
 }
