@@ -226,11 +226,34 @@ createApp({
           status: 'received'
         };
         this.selectedContact.messages.push(reply);
+        this.$nextTick(() => {this.scrollToBottom();});
       }, 2000);
+
+      this.$nextTick(() => {this.scrollToBottom();});
+    },
+    
+    scrollToBottom: function() {
+      const container = this.$refs.chatContainer;
+      container.scrollTop = container.scrollHeight;
     }
+
+
+
+
+
+
+
+
+
+
     
     
   },
+
+
+
+
+
   
   // FUNZIONE VUE CALCOLATA IN BASE AD ALTRE FUNZIONI
   computed: {

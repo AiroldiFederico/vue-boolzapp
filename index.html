@@ -126,7 +126,7 @@
                     </div>
 
                     <!-- CHAT BOX -->
-                    <div class="chatbox d-flex flex-column">
+                    <div class="chatbox d-flex flex-column" ref="chatContainer">
 
                         <div class=" d-flex justify-content-center" v-for="message in selectedContact.messages">
                             <div :class="['w-50', 'text', message.status === 'received' ? 'text-receive' : 'text-send']"> {{ message.message }}
