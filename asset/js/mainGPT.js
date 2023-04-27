@@ -177,6 +177,7 @@ createApp({
 
       search: '',
       newMessage: '',
+      messagesGPT: [],
       
 
 
@@ -210,7 +211,7 @@ createApp({
     },
     
     async sendMessage() {
-        const openaiApiKey = '';
+        const openaiApiKey = 'INSERISCI QUA APIKEY DI OPENAI PRIMA DI TUTTO';
 
         if (!this.newMessage) {
           return;
@@ -221,6 +222,9 @@ createApp({
           status: 'sent'
         };
         this.selectedContact.messages.push(message);
+
+        const userMessage = { role: 'user', content: this.newMessage };
+        this.messagesGPT.push(userMessage);
         this.newMessage = '';
     
         const response = await axios.post(
@@ -228,11 +232,7 @@ createApp({
           
           {
             model: 'gpt-3.5-turbo',
-            messages: [
-                { role: 'user', content: 'Ciao!' },
-                { role: 'assistant', content: 'Ciao! Come posso aiutarti?' },
-                { role: 'user', content: 'scrivi solamente la seguente frase senza scrivere altro tipo certamente ecco la tua frase solo e solamente la seguente frase:Hey! Il mio nome è AiroGPT e sono stato creato da Federico Airoldi, Proviamo a conversare?' }
-              ]
+            messages: this.messagesGPT
           },
           {
             headers: {
@@ -247,12 +247,18 @@ createApp({
         console.log(replyText);
     
         
-        const reply = {
-        date: new Date().toLocaleString(),
-        message: replyText,
-        status: 'received'
-        };
-        this.selectedContact.messages.push(reply);
+        setTimeout(() => {
+            const reply = {
+              date: new Date().toLocaleString(),
+              message: replyText,
+              status: 'received'
+            };
+            this.selectedContact.messages.push(reply);
+            this.messages.push({ role: 'assistant', content: replyText });
+            this.$nextTick(() => {this.scrollToBottom();});
+          }, 2000);
+
+       
           
         
 
