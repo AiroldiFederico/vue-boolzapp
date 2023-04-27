@@ -172,8 +172,9 @@ img {
 .hour {
     position: absolute;
     font-weight: lighter;
-    font-size: smaller;
+    font-size: 0.6rem;
     right: 5px;
     bottom: 0;
+    margin-top: 0.6rem;
 }
 

@@ -173,7 +173,9 @@ createApp({
                   }
               ],
           }
-      ]
+      ],
+
+      search: '',
 
 
     }
@@ -188,14 +190,20 @@ createApp({
   // FUNZIONI VUE
   methods: {
 
-    selectContact(index) {
-      this.contacts.forEach((contact, i) => {
-        contact.visible = i === index;
+    // selectContact(index) {
+    //   this.contacts.forEach((contact, i) => {
+    //     contact.visible = i === index;
+    //   });
+
+    //   console.log(this.contacts)
+    // },
+
+    selectContact(contact) {
+      const index = this.contacts.findIndex(c => c === contact);
+      this.contacts.forEach((c, i) => {
+        c.visible = i === index;
       });
-
-      console.log(this.contacts)
-    },
-
+    }
     
     
     
@@ -205,6 +213,14 @@ createApp({
   computed: {
     selectedContact() {
       return this.contacts.find(contact => contact.visible);
+    },
+
+    filteredContacts() {
+      if (!this.search) {
+        return this.contacts;
+      }
+      const search = this.search.toLowerCase();
+      return this.contacts.filter(contact => contact.name.toLowerCase().includes(search));
     }
   }
 

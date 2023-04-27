@@ -81,14 +81,14 @@
                     <div class="searchbox">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text"><i class="fa-solid fa-magnifying-glass" style="color: #aaaaaa;"></i></span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="search">
                         </div>
                     </div>
 
                     <!-- LISTA CHAT -->
                     <div class="listchat">
                         <!-- CHAT SINGOLA -->
-                        <div class="chat" v-for="(item, index) in contacts" @click="selectContact(index)">
+                        <div class="chat" v-for="item in filteredContacts" @click="selectContact(item)">
                             <img :src="item.avatar" alt="pp1">
                             <div class="d-flex flex-column ms-2">
                                 <span>{{ item.name }}</span>
