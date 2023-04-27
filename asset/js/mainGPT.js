@@ -210,7 +210,7 @@ createApp({
     },
     
     async sendMessage() {
-        const openaiApiKey = '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';
+        const openaiApiKey = '';
 
         if (!this.newMessage) {
           return;
