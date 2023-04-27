@@ -114,7 +114,7 @@ createApp({
           },
           {
               name: 'Claudia',
-              avatar: './asset/img/avatar_5.png',
+              avatar: './asset/img/avatar_6.png',
               visible: true,
               messages: [
                   {
@@ -188,7 +188,13 @@ createApp({
   // FUNZIONI VUE
   methods: {
 
+    selectContact(index) {
+      this.contacts.forEach((contact, i) => {
+        contact.visible = i === index;
+      });
 
+      console.log(this.contacts)
+    }
 
     
   }

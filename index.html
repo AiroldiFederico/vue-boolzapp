@@ -88,7 +88,7 @@
                     <!-- LISTA CHAT -->
                     <div class="listchat">
                         <!-- CHAT SINGOLA -->
-                        <div class="chat" v-for="item in contacts">
+                        <div class="chat" v-for="(item, index) in contacts" @click="selectContact(index)">
                             <img :src="item.avatar" alt="pp1">
                             <div class="d-flex flex-column ms-2">
                                 <span>{{ item.name }}</span>
@@ -112,7 +112,6 @@
                         <!-- profilo -->
                         <div>
                             <img src="./asset/img/avatar_io.png" alt="PP_io">
-
                             <span class="ms-2">Sofia</span>
                         </div>
 
@@ -127,6 +126,7 @@
 
                     <!-- CHAT BOX -->
                     <div class="chatbox d-flex flex-column">
+
                         <div class=" d-flex justify-content-center">
                             <div class=" w-50 text text-receive">Testo fatto!
                                 <div class="hour">12:00</div>
