@@ -194,9 +194,19 @@ createApp({
       });
 
       console.log(this.contacts)
-    }
+    },
 
     
+    
+    
+  },
+  
+  // FUNZIONE VUE CALCOLATA IN BASE AD ALTRE FUNZIONI
+  computed: {
+    selectedContact() {
+      return this.contacts.find(contact => contact.visible);
+    }
   }
+
 
 }).mount('#app')

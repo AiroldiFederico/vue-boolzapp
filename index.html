@@ -110,10 +110,11 @@
                     <div class="topbar">
 
                         <!-- profilo -->
-                        <div>
-                            <img src="./asset/img/avatar_io.png" alt="PP_io">
-                            <span class="ms-2">Sofia</span>
+                        <div v-if="selectedContact">
+                            <img :src="selectedContact.avatar" alt="PP_io">
+                            <span class="ms-2">{{ selectedContact.name }}</span>
                         </div>
+                          
 
                         <!-- icone -->
                         <div class="d-flex align-items-center">
