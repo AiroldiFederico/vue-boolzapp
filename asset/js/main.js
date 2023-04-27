@@ -179,6 +179,7 @@ createApp({
       newMessage: '',
 
 
+
     }
   },
 
@@ -217,6 +218,15 @@ createApp({
       };
       this.selectedContact.messages.push(message);
       this.newMessage = '';
+
+      setTimeout(() => {
+        const reply = {
+          date: new Date().toLocaleString(),
+          message: 'Ok!',
+          status: 'received'
+        };
+        this.selectedContact.messages.push(reply);
+      }, 2000);
     }
     
     
