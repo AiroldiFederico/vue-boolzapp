@@ -145,7 +145,7 @@
                     <!-- TEXTBOX -->
                     <div class="textbox">
                         <i class="fa-regular fa-face-smile" style="color: #aaaaaa;"></i>
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
                         <i class="fa-solid fa-microphone me-2" style="color: #aaaaaa;"></i>
                     </div>
 

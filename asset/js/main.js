@@ -176,6 +176,7 @@ createApp({
       ],
 
       search: '',
+      newMessage: '',
 
 
     }
@@ -203,8 +204,20 @@ createApp({
       this.contacts.forEach((c, i) => {
         c.visible = i === index;
       });
-    }
+    },
     
+    sendMessage() {
+      if (!this.newMessage) {
+        return;
+      }
+      const message = {
+        date: new Date().toLocaleString(),
+        message: this.newMessage,
+        status: 'sent'
+      };
+      this.selectedContact.messages.push(message);
+      this.newMessage = '';
+    }
     
     
   },
