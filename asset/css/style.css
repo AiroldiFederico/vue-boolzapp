@@ -5,7 +5,7 @@ body {
     word-spacing: 2px;
     height: 100vh !important;
     background: rgb(145,199,151);
-    background: linear-gradient(180deg, rgb(56, 194, 146) 20%, rgba(221,221,221,1) 10%);
+    background: linear-gradient(180deg, rgb(8, 158, 136) 13.2%, rgb(230, 231, 225) 10%);
 }
 
 /* PALETTE COLORI */
@@ -16,23 +16,27 @@ body {
     --color-4: #e8e8e8;
     --color-5: #262626;
     --secondary-text: #c2c2c2;
+    --secondary-background: #ffffff;
 }
 
 main {
     background-color: white;
     height: 60rem !important ;
-    border-radius: 4px; /*da ereditare*/
-    border: solid rgb(109, 109, 109) 1px;
+    -webkit-box-shadow: 0px 0px 10px 0px #00000022;
+-moz-box-shadow: 0px 0px 10px 0px #00000022;
+-o-box-shadow: 0px 0px 10px 0px #00000022;
+box-shadow: 0px 0px 10px 0px #00000022
+
 }
 
 #lft-side {
-    border-right: 2px solid #0000002a;
+    border-right: 1px solid #00000038;
     height: 100% !important;
 }
 
 .topbar {
     width: 100%;
-    background-color: #e9e9e9;
+    background-color: var(--secondary-background);
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -51,7 +55,7 @@ img {
 }
 
 .alert {
-    background-color: rgb(112, 216, 250);
+    background-color: rgba(133, 225, 255, 0.656);
     width: 100%;
     height: 5.5rem;
     border-radius: 0%;
@@ -70,13 +74,13 @@ img {
 }
 
 #bell-alert i {
-    color: rgb(112, 216, 250) !important;
+    color: rgba(133, 225, 255, 0.656) !important;
     font-size: 1.2rem;
 }
 
 .listchat {
     width: 100%;
-    height: calc(60rem - 13.8rem);
+    height: calc(60rem - 13.7rem);
     background-color: #ffffff;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -85,7 +89,13 @@ img {
 .searchbox {
     width: 100%;
     padding: 0.4rem;
-    background-color: #f0f0f0;
+    background-color: var(--secondary-background);
+}
+
+.textbox input.form-control  {
+    padding: 0.675rem 0.75rem;
+    border: none;
+    background-color: rgb(248, 248, 248);
 }
 
 .chat {
@@ -114,20 +124,21 @@ img {
 .chatbox {
     background-image: url(../img/mine.jpg);
     width: 100%;
-    height: calc(51rem - 1px);
+    height: calc(51rem);
     overflow-y: scroll;
 }
 
 .textbox {
     height: 4rem;
     width: 100%;
-    background-color: #e9e9e9;
-    padding: 0.5rem;
+    background-color: var(--secondary-background);
+    padding: 0rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
+
 
 .textbox i {
     font-size: 1.5rem;
