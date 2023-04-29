@@ -1,8 +1,5 @@
 
 
-
-
-
 const { createApp } = Vue
 
 createApp({
@@ -180,6 +177,10 @@ createApp({
       search: '',
       newMessage: '',
       messagesGPT: [],
+      currentTime: new Date().toLocaleString('it-IT', {
+        hour: '2-digit',
+        minute: '2-digit',
+      })
       
       
 
@@ -214,13 +215,13 @@ createApp({
     },
     
     async sendMessage() {
-        const openaiApiKey = `{ OPENAI_API_KEY } from './config.js'`;
+        const openaiApiKey = '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';
 
         if (!this.newMessage) {
           return;
         }
         const message = {
-          date: new Date().toLocaleString(),
+          date: this.currentTime,
           message: this.newMessage,
           status: 'sent'
         };
@@ -252,7 +253,7 @@ createApp({
         
         setTimeout(() => {
             const reply = {
-              date: new Date().toLocaleString(),
+              date: this.currentTime,
               message: replyText,
               status: 'received'
             };
@@ -263,6 +264,10 @@ createApp({
 
 
         this.$nextTick(() => {this.scrollToBottom();});
+    },
+
+    deleteMessage(message) {
+        message.message = 'messaggio eliminato';
     },
 
 
