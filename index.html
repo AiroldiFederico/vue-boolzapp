@@ -92,7 +92,7 @@
                             <img :src="item.avatar" alt="pp1">
                             <div class="d-flex flex-column ms-2">
                                 <span>{{ item.name }}</span>
-                                <span class="secondary-text-color fw-normal">Ultimo messaggio inviato</span>
+                                <span class="secondary-text-color fw-normal overflow-hidden" >{{ item.messages[item.messages.length - 1].message }}</span>
                             </div>
                             <div id="ora1" class="secondary-text-color fw-normal">
                                12:00 

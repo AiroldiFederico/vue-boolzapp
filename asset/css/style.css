@@ -46,8 +46,8 @@ main {
 img {
     border-radius: 50%;
     aspect-ratio: 1;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .topbar i {
@@ -56,7 +56,7 @@ img {
 }
 
 .alert {
-    background-color: rgba(133, 225, 255, 0.656);
+    background-color: rgba(93, 214, 255, 0.656);
     width: 100%;
     height: 5.5rem;
     border-radius: 0%;
@@ -75,7 +75,7 @@ img {
 }
 
 #bell-alert i {
-    color: rgba(133, 225, 255, 0.656) !important;
+    color: rgba(93, 214, 255, 0.656) !important;
     font-size: 1.2rem;
 }
 

@@ -7,9 +7,11 @@ const { createApp } = Vue
 
 createApp({
 
+    
   // VARIABILI VUE
   data() {
     return {
+        
       
         contacts: [
           {
@@ -179,6 +181,7 @@ createApp({
       newMessage: '',
       messagesGPT: [],
       
+      
 
 
 
@@ -211,7 +214,7 @@ createApp({
     },
     
     async sendMessage() {
-        const openaiApiKey = 'INSERISCI QUA APIKEY DI OPENAI PRIMA DI TUTTO';
+        const openaiApiKey = `{ OPENAI_API_KEY } from './config.js'`;
 
         if (!this.newMessage) {
           return;
@@ -258,9 +261,6 @@ createApp({
             this.$nextTick(() => {this.scrollToBottom();});
           }, 2000);
 
-       
-          
-        
 
         this.$nextTick(() => {this.scrollToBottom();});
     },
@@ -271,22 +271,9 @@ createApp({
       container.scrollTop = container.scrollHeight;
     }
 
-
-
-
-
-
-
-
-
-
     
     
   },
-
-
-
-
 
   
   // FUNZIONE VUE CALCOLATA IN BASE AD ALTRE FUNZIONI
