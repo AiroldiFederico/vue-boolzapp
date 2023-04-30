@@ -215,7 +215,7 @@ createApp({
     },
     
     async sendMessage() {
-        const openaiApiKey = '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';
+        const openaiApiKey = 'INSERIRE APIKEY QUA';
 
         if (!this.newMessage) {
           return;
